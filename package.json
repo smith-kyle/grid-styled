@@ -4,7 +4,7 @@
   "description": "Responsive React grid system built with styled-components",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "babel src -d dist",
+    "postinstall": "babel src -d dist",
     "test": "nyc ava",
     "cover": "nyc report --reporter=lcov --reporter=html",
     "start": "webpack-dev-server",
@@ -47,9 +47,10 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "prop-types": "^15.5.10",
     "styled-components": "^2.0.1",
-    "styled-system": "^1.0.0-9",
+    "styled-system": "^1.0.0-15",
     "tag-hoc": "^1.0.0-0"
   },
   "ava": {
